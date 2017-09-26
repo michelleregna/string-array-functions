@@ -12,6 +12,9 @@ $obj -> replaceThis($str);
 $obj -> returnThis($str);
 $obj -> titlecaseThis($str);
 
+$familyArray = array('Father' => 'Chris', 'Mother' => 'Claire', 'Sister' => 'Allison');
+$obj -> printArray($familyArray);
+
 class main {
 	public function __construct() {
 		echo '<h1>String Functions</h1>';
@@ -78,6 +81,17 @@ class main {
 		echo ucwords($str);
 		echo '<hr>';
 	}
+
+	// Start of Array Functions
+
+	public function printArray($array) {
+	  
+		echo '<h1>Array Functions</h1>';
+		echo '<h2>Array Print Function:</h2>';
+		print_r($array);
+		echo '<hr>';
+    }
+
 
 	public function __destruct() {
 
