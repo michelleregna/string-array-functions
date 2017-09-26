@@ -21,6 +21,7 @@ $obj -> searchArray($familyArray);
 $obj -> sortKeyArray($familyArray);
 $obj -> sortValueArray($familyArray);
 $obj -> returnKeyArray($familyArray);
+$obj -> flipArray($familyArray);
 
 class main {
 	public function __construct() {
@@ -143,6 +144,13 @@ class main {
     public function returnKeyArray($array) {
     	echo '<h2>8. Array Random Key Function:</h2>';
     	echo array_rand($array);
+    	echo '<hr>';
+    }
+
+    public function flipArray($array) {
+    	echo '<h2>9. Array Flip Function:</h2>';
+    	$flipped = array_flip($array);
+    	print_r($flipped);
     	echo '<hr>';
     }
 
