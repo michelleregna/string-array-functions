@@ -9,6 +9,8 @@ $obj -> countThis($str);
 $obj -> lowercaseThis($str);
 $obj -> rot13This($str);
 $obj -> replaceThis($str);
+$obj -> returnThis($str);
+$obj -> titlecaseThis($str);
 
 class main {
 	public function __construct() {
@@ -67,6 +69,18 @@ class main {
 	public function replaceThis($str) {
 		echo '<h1>Substring Replace Function Demo:</h1>';
 		echo substr_replace($str, 'nombre', 3, 4);
+		echo '<hr>';
+	}
+
+	public function returnThis($str) {
+		echo '<h1>Return Substring Function Demo:</h1>';
+		echo substr($str, 11);
+		echo '<hr>';
+	}
+
+	public function titlecaseThis($str) {
+		echo '<h1>Ucwords Function Demo:</h1>';
+		echo ucwords($str);
 		echo '<hr>';
 	}
 
