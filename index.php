@@ -12,12 +12,14 @@ $obj -> replaceThis($str);
 $obj -> returnThis($str);
 $obj -> titlecaseThis($str);
 
-$familyArray = array('Father' => 'Chris', 'Mother' => 'Claire', 'Sister' => 'Allison');
+$familyArray = array('Father' => 'Chris', 'Mother' => 'Claire', 'Sister' => 'Allison', 'Dog' => 'Finn');
 $obj -> printArray($familyArray);
 $obj -> countArray($familyArray);
 $obj -> shuffleArray($familyArray);
 $obj -> sliceArray($familyArray);
 $obj -> searchArray($familyArray);
+$obj -> sortKeyArray($familyArray);
+$obj -> sortValueArray($familyArray);
 
 class main {
 	public function __construct() {
@@ -117,8 +119,23 @@ class main {
 
     public function searchArray($array) {
     	echo '<h2>5. Array Key Exists Function:</h2>';
-    	echo 'Does the key "sister" exist in the array? Answer: ';
+    	echo 'Does the key "Sister" exist in the array? Answer: ';
     	echo array_key_exists('Sister', $array);
+    	echo '<hr>';
+    }
+
+    public function sortKeyArray($array) {
+    	echo '<h2>6. Array Key Sort Function:</h2>';
+    	ksort($array);
+    	print_r($array);
+    	echo '<hr>';
+
+    }
+
+    public function sortValueArray($array) {
+    	echo '<h2>7. Array Value Sort Function: </h2>';
+    	asort($array);
+    	print_r($array);
     	echo '<hr>';
     }
 
