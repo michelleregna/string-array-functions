@@ -16,6 +16,7 @@ $familyArray = array('Father' => 'Chris', 'Mother' => 'Claire', 'Sister' => 'All
 $obj -> printArray($familyArray);
 $obj -> countArray($familyArray);
 $obj -> shuffleArray($familyArray);
+$obj -> sliceArray($familyArray);
 
 class main {
 	public function __construct() {
@@ -88,21 +89,28 @@ class main {
 
 	public function printArray($array) {
 		echo '<h1>Array Functions</h1>';
-		echo '<h2>Array Print Function:</h2>';
+		echo '<h2>1. Array Print Function:</h2>';
 		print_r($array);
 		echo '<hr>';
     }
 
     public function countArray($array) {
-    	echo '<h2>Array Count Function:</h2>';
+    	echo '<h2>2. Array Count Function:</h2>';
     	echo count($array);
     	echo '<hr>';
     }
 
     public function shuffleArray($array) {
-    	echo '<h2>Array Shuffle Function:</h2>';
+    	echo '<h2>3. Array Shuffle Function:</h2>';
     	shuffle($array);
     	print_r($array);
+    	echo '<hr>';
+    }
+
+    public function sliceArray($array) {
+    	echo '<h2>4. Array Slice Function:</h2>';
+    	$parentsArray = array_slice($array, 0, 2);
+    	print_r($parentsArray);
     	echo '<hr>';
     }
 
