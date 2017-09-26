@@ -3,6 +3,7 @@ $str = 'My name is Michelle';
 $obj = new main();
 $obj -> printThis($str);
 $obj -> reverseThis($str);
+$obj -> uppercaseThis($str);
 
 class main {
 	public function __construct() {
@@ -19,6 +20,12 @@ class main {
 	public function reverseThis($str) {
 		echo '<h1>Reverse Function Demo: </h1>';
 		echo strrev($str);
+		echo '<hr>';
+	}
+
+	public function uppercaseThis($str) {
+		echo '<h1>Uppercase Function Demo:</h1>';
+		echo strtoupper($str);
 		echo '<hr>';
 	}
 
