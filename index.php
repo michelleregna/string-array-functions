@@ -8,6 +8,7 @@ $obj -> repeatThis($str);
 $obj -> countThis($str);
 $obj -> lowercaseThis($str);
 $obj -> rot13This($str);
+$obj -> replaceThis($str);
 
 class main {
 	public function __construct() {
@@ -60,6 +61,12 @@ class main {
 	public function rot13This($str) {
 		echo'<h1>Rot13 Function Demo:</h1>';
 		echo str_rot13($str);
+		echo '<hr>';
+	}
+
+	public function replaceThis($str) {
+		echo '<h1>Substring Replace Function Demo:</h1>';
+		echo substr_replace($str, 'nombre', 3, 4);
 		echo '<hr>';
 	}
 
