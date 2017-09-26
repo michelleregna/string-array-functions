@@ -17,10 +17,11 @@ $obj -> printArray($familyArray);
 $obj -> countArray($familyArray);
 $obj -> shuffleArray($familyArray);
 $obj -> sliceArray($familyArray);
-$obj -> searchArray($familyArray);
-$obj -> sortKeyArray($familyArray);
-$obj -> sortValueArray($familyArray);
-$obj -> returnKeyArray($familyArray);
+$obj -> searchArrayForKey($familyArray);
+$obj -> searchArrayForValue($familyArray);
+$obj -> sortByKey($familyArray);
+$obj -> sortByValue($familyArray);
+$obj -> returnArrayKey($familyArray);
 $obj -> flipArray($familyArray);
 
 class main {
@@ -28,7 +29,6 @@ class main {
 		echo '<h1>String Functions</h1>';
 
 	}
-
 
 	public function reverseThis($str) {
 		echo '<h2>1. Reverse Function Demo:</h2>';
@@ -90,7 +90,7 @@ class main {
 		echo '<hr>';
 	}
 
-	// Start of Array Functions
+	// Start of Array Functions //
 
 	public function printArray($array) {
 		echo '<h1>Array Functions</h1>';
@@ -119,36 +119,43 @@ class main {
     	echo '<hr>';
     }
 
-    public function searchArray($array) {
+    public function searchArrayForKey($array) {
     	echo '<h2>5. Array Key Exists Function:</h2>';
     	echo 'Does the key "Sister" exist in the array? Answer: ';
     	echo array_key_exists('Sister', $array);
     	echo '<hr>';
     }
 
-    public function sortKeyArray($array) {
-    	echo '<h2>6. Array Key Sort Function:</h2>';
+    public function searchArrayForValue($array) {
+    	echo '<h2>6. Array Value Exists Function: </h2>';
+    	echo 'Does the value "Finn" exist in the array? Answer: ';
+    	echo in_array('Finn', $array);
+    	echo '<hr>';
+    }
+
+    public function sortByKey($array) {
+    	echo '<h2>7. Array Key Sort Function:</h2>';
     	ksort($array);
     	print_r($array);
     	echo '<hr>';
 
     }
 
-    public function sortValueArray($array) {
-    	echo '<h2>7. Array Value Sort Function: </h2>';
+    public function sortByValue($array) {
+    	echo '<h2>8. Array Value Sort Function: </h2>';
     	asort($array);
     	print_r($array);
     	echo '<hr>';
     }
 
-    public function returnKeyArray($array) {
-    	echo '<h2>8. Array Random Key Function:</h2>';
+    public function returnArrayKey($array) {
+    	echo '<h2>9. Array Random Key Function:</h2>';
     	echo array_rand($array);
     	echo '<hr>';
     }
 
     public function flipArray($array) {
-    	echo '<h2>9. Array Flip Function:</h2>';
+    	echo '<h2>10. Array Flip Function:</h2>';
     	$flipped = array_flip($array);
     	print_r($flipped);
     	echo '<hr>';
