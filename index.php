@@ -1,6 +1,7 @@
 <?php
 $str = 'My name is Michelle';
 $obj = new main();
+$obj -> printThis($str);
 
 class main {
 	public function __construct() {
@@ -14,14 +15,8 @@ class main {
 
 	}
 
-	public function reverseThis($str) {
-		echo '<h1>Reverse Function Demo: </h1>';
-		echo strrev($str);
-		echo '<hr>';
-	}
-
 	public function __destruct() {
-		
+
 	}
 
 }
