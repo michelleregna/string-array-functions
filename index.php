@@ -7,6 +7,7 @@ $obj -> uppercaseThis($str);
 $obj -> repeatThis($str);
 $obj -> countThis($str);
 $obj -> lowercaseThis($str);
+$obj -> rot13This($str);
 
 class main {
 	public function __construct() {
@@ -14,14 +15,14 @@ class main {
 	}
 
 	public function printThis($str) {
-		echo '<h1>Print Function Demo: </h1>';
+		echo '<h1>Print Function Demo:</h1>';
 		print($str);
 		echo '<hr>';
 
 	}
 
 	public function reverseThis($str) {
-		echo '<h1>Reverse Function Demo: </h1>';
+		echo '<h1>Reverse Function Demo:</h1>';
 		echo strrev($str);
 		echo '<hr>';
 	}
@@ -53,6 +54,12 @@ class main {
 	public function lowercaseThis($str) {
 		echo '<h1>Lowercase Function Demo:</h1>';
 		echo strtolower($str);
+		echo '<hr>';
+	}
+
+	public function rot13This($str) {
+		echo'<h1>Rot13 Function Demo:</h1>';
+		echo str_rot13($str);
 		echo '<hr>';
 	}
 
