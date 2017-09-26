@@ -14,6 +14,7 @@ $obj -> titlecaseThis($str);
 
 $familyArray = array('Father' => 'Chris', 'Mother' => 'Claire', 'Sister' => 'Allison');
 $obj -> printArray($familyArray);
+$obj -> countArray($familyArray);
 
 class main {
 	public function __construct() {
@@ -85,11 +86,16 @@ class main {
 	// Start of Array Functions
 
 	public function printArray($array) {
-	  
 		echo '<h1>Array Functions</h1>';
 		echo '<h2>Array Print Function:</h2>';
 		print_r($array);
 		echo '<hr>';
+    }
+
+    public function countArray($array) {
+    	echo '<h2>Array Count Function:</h2>';
+    	echo count($array);
+    	echo '<hr>';
     }
 
 
