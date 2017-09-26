@@ -5,6 +5,7 @@ $obj -> printThis($str);
 $obj -> reverseThis($str);
 $obj -> uppercaseThis($str);
 $obj -> repeatThis($str);
+$obj -> countThis($str);
 
 class main {
 	public function __construct() {
@@ -33,6 +34,12 @@ class main {
 	public function repeatThis($str) {
 		echo '<h1>Repeat Function Demo:</h1>';
 		echo str_repeat($str, 5);
+		echo '<hr>';
+	}
+
+	public function countThis($str) {
+		echo '<h1>Length Function Demo:</h1>';
+		echo strlen($str);
 		echo '<hr>';
 	}
 
