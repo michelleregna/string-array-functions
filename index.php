@@ -20,6 +20,7 @@ $obj -> sliceArray($familyArray);
 $obj -> searchArray($familyArray);
 $obj -> sortKeyArray($familyArray);
 $obj -> sortValueArray($familyArray);
+$obj -> returnKeyArray($familyArray);
 
 class main {
 	public function __construct() {
@@ -136,6 +137,12 @@ class main {
     	echo '<h2>7. Array Value Sort Function: </h2>';
     	asort($array);
     	print_r($array);
+    	echo '<hr>';
+    }
+
+    public function returnKeyArray($array) {
+    	echo '<h2>8. Array Random Key Function:</h2>';
+    	echo array_rand($array);
     	echo '<hr>';
     }
 
