@@ -6,6 +6,7 @@ $obj -> reverseThis($str);
 $obj -> uppercaseThis($str);
 $obj -> repeatThis($str);
 $obj -> countThis($str);
+$obj -> shuffleThis($str);
 
 class main {
 	public function __construct() {
@@ -40,6 +41,12 @@ class main {
 	public function countThis($str) {
 		echo '<h1>Length Function Demo:</h1>';
 		echo strlen($str);
+		echo '<hr>';
+	}
+
+	public function shuffleThis($str) {
+		echo '<h1>Shuffle Function Demo:</h1>';
+		echo str_shuffle($str);
 		echo '<hr>';
 	}
 
