@@ -15,6 +15,7 @@ $obj -> titlecaseThis($str);
 $familyArray = array('Father' => 'Chris', 'Mother' => 'Claire', 'Sister' => 'Allison');
 $obj -> printArray($familyArray);
 $obj -> countArray($familyArray);
+$obj -> shuffleArray($familyArray);
 
 class main {
 	public function __construct() {
@@ -49,7 +50,7 @@ class main {
 
 	public function shuffleThis($str) {
 		echo '<h2>5. Shuffle Function Demo:</h2>';
-		echo str_shuffle($str);
+		str_shuffle($str);
 		echo '<hr>';
 	}
 
@@ -95,6 +96,13 @@ class main {
     public function countArray($array) {
     	echo '<h2>Array Count Function:</h2>';
     	echo count($array);
+    	echo '<hr>';
+    }
+
+    public function shuffleArray($array) {
+    	echo '<h2>Array Shuffle Function:</h2>';
+    	shuffle($array);
+    	print_r($array);
     	echo '<hr>';
     }
 
