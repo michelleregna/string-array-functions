@@ -17,6 +17,7 @@ $obj -> printArray($familyArray);
 $obj -> countArray($familyArray);
 $obj -> shuffleArray($familyArray);
 $obj -> sliceArray($familyArray);
+$obj -> searchArray($familyArray);
 
 class main {
 	public function __construct() {
@@ -111,6 +112,13 @@ class main {
     	echo '<h2>4. Array Slice Function:</h2>';
     	$parentsArray = array_slice($array, 0, 2);
     	print_r($parentsArray);
+    	echo '<hr>';
+    }
+
+    public function searchArray($array) {
+    	echo '<h2>5. Array Key Exists Function:</h2>';
+    	echo 'Does the key "sister" exist in the array? Answer: ';
+    	echo array_key_exists('Sister', $array);
     	echo '<hr>';
     }
 
