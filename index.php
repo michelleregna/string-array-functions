@@ -4,6 +4,7 @@ $obj = new main();
 $obj -> printThis($str);
 $obj -> reverseThis($str);
 $obj -> uppercaseThis($str);
+$obj -> repeatThis($str);
 
 class main {
 	public function __construct() {
@@ -26,6 +27,12 @@ class main {
 	public function uppercaseThis($str) {
 		echo '<h1>Uppercase Function Demo:</h1>';
 		echo strtoupper($str);
+		echo '<hr>';
+	}
+
+	public function repeatThis($str) {
+		echo '<h1>Repeat Function Demo:</h1>';
+		echo str_repeat($str, 5);
 		echo '<hr>';
 	}
 
